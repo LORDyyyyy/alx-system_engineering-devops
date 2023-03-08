@@ -1,1 +1,1 @@
-Print current directory
+LS Script
