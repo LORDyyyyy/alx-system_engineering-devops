@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Client configuration file
+# the next commands are wirtten in the ~/.ssh/config file
+
+PasswordAuthentication no
+IdentityFile ~/.ssh/school
