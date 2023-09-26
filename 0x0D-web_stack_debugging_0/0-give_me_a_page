@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# the command to start the apache service
+# after connecting to a Docker container
+sudo service apache2 start
