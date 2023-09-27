@@ -15,7 +15,7 @@ file { '/var/www/html/index.html':
 }
 
 exec {'redirect_me':
-  command  => 'sed -i "9i\      rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;" /etc/nginx/sites-available/default',
+  command  => 'sed -i "/server_name _;/a      rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;" /etc/nginx/sites-available/default',
   provider => 'shell'
 }
 
