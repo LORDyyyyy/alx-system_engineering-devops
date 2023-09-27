@@ -10,7 +10,7 @@ package { 'nginx':
 }
 
 file { '/var/www/html/index.html':
-  content => 'Hello World 2',
+  content => 'Hello World !',
   require => Package['nginx'],
 }
 
