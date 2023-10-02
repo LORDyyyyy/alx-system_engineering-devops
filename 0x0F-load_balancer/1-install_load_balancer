@@ -26,10 +26,10 @@ defaults
 
 listen alx
     bind *:80
+    stats enable
     balance roundrobin
     server 363756-web-01 100.26.53.140:80 check
     server 363756-web-02 100.26.244.194:80 check
 " > /etc/haproxy/haproxy.cfg
 
-sudo systemctl restart haproxy
-sudo systemctl enable haproxy
+sudo systemctl start haproxy
