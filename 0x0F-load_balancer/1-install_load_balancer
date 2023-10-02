@@ -27,8 +27,8 @@ defaults
 listen alx
     bind *:80
     balance roundrobin
-    server web-01 100.26.53.140:80 check
-    server web-02 100.26.244.194:80 check
+    server 363756-web-01 100.26.53.140:80 check
+    server 363756-web-02 100.26.244.194:80 check
 " > /etc/haproxy/haproxy.cfg
 
 sudo systemctl restart haproxy
