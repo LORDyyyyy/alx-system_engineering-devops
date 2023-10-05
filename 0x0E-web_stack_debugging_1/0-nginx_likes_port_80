@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # Nginx likes port 80
 
-service nginx start
-
 sed -i 's/listen [0-9]\+/listen 80/g' /etc/nginx/sites-enabled/default
 sed -i 's/listen \[::\]:[0-9]\+/listen \[::\]:80/g' /etc/nginx/sites-enabled/default
 
-service nginx reload
+service nginx start
