@@ -10,4 +10,6 @@ if [ "$1" ] ; then
 	mysqldump -u root -p $mysql_root_password --all-databases > $dump_file
 
 	tar -czf $archive_file $dump_file
+
+	echo $dump_file
 fi
