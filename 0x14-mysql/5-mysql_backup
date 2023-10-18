@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# MySQL backup
+
+current_date=$(date +%d-%m-%Y)
+mysql_root_password=$1
+dump_file="backup.sql"
+archive_file="$current_date.tar.gz"
+
+mysqldump -u root -p $mysql_root_password --all-databases > $dump_file
+
+tar -czf $archive_file $dump_file
