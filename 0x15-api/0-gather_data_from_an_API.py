@@ -18,4 +18,4 @@ if __name__ == "__main__":
     print(
         f'Employee {emp_name} is done with tasks({len(tasks)}/{total_tasks}):')
     for task in tasks:
-        print(f'\t{task}')
+        print(f'\t {task}')
