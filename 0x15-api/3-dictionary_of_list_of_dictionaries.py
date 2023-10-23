@@ -9,7 +9,7 @@ if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
     users = requests.get(url + "users").json()
 
-    data = []
+    data = {}
     for user in users:
         username = user['username']
         userId = user['id']
@@ -25,7 +25,7 @@ if __name__ == "__main__":
             temp['completed'] = task['completed']
             tasks.append(temp)
 
-        data.append({userId: tasks})
+        data[userId] = tasks
 
     with open(f'todo_all_employees.json', 'w') as f:
-        f.write(json.dumps(data))
+        json.dump(data, f)
