@@ -12,7 +12,7 @@ if __name__ == "__main__":
     todo = requests.get(url + f"todos").json()
 
     todo = [task for task in todo if task['userId'] == int(id)]
-    emp_name = user['name']
+    emp_name = user['username']
     total_tasks = len(todo)
     tasks = [(task['title'], task['completed']) for task in todo]
 
