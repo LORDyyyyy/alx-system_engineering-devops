@@ -30,7 +30,8 @@ if __name__ == "__main__":
     with open(f'{id}.csv', 'w') as csvfile:
         fieldnames = dataset[0].keys()
 
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames,
+                                quoting=csv.QUOTE_ALL)
 
         for row in dataset:
             writer.writerow(row)
