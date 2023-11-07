@@ -16,4 +16,4 @@ def top_ten(subreddit):
         for i in top:
             print(i)
     else:
-        return (None)
+        print("None")
